@@ -62,10 +62,11 @@ main()
 async function main() {
   await mongoose.connect(dburl);
 }
-// rootpage
-app.get("/",(req,res)=>{
-  res.send("you are looking for / listinds page ");
-});
+
+const Listing = require("./models/listing.js");
+const wrapAsync = require("./UtilsError/warpAsync.js");
+
+
 
 
 
@@ -103,6 +104,12 @@ app.use((req,res,next)=>{
 //app.use middleware 
 //one is for lissting route and other one is for 
 //review routw
+
+app.get("/", wrapAsync(async (req, res) => {
+  const allListings = await Listing.find({});
+  res.render("listings/index.ejs", { allListings });
+}));
+
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
