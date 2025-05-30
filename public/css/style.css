@@ -1,0 +1,234 @@
+.navbar {
+  height: 5rem;
+  background-color: #74C69D;
+}
+.ioc{
+  color: darkslateblue;
+}
+.ioc:hover{
+      transform: scale(1.025);
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1 ;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fa-route {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-weight: 600 !important;
+}
+
+.io {
+  text-decoration: none;
+  color: #222222;
+}
+
+.io:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.f-info-socials i {
+  font-size: 1.25rem;
+  margin-top: 2px;
+  margin-left: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  display: flex;
+  background-color: #ebebeb;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.listing-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 500 !important;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.card:hover .card-text {
+  color: #ff4081;
+  /* Change text color on hover */
+  transform: translateY(-12px);
+  /* Slight upward movement */
+  font-size: 1.1rem;
+  /* Increase font size slightly */
+  letter-spacing: 1px;
+  /* Add some spacing between letters */
+  font-weight: 700;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.card {
+  border: none !important;
+  margin-bottom: 3.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  /* Moves the card outward */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* Adds shadow for a lifting effect */
+}
+
+.card:hover .card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Light background on hover */
+  transition: background-color 0.3s ease;
+}
+
+.card-body {
+  z-index: 2;
+}
+
+.add-btn{
+  background-color: darkslateblue !important;
+  border: none !important;
+}
+
+.edit-btn{
+  background-color: darkslateblue !important;
+  border: none !important;
+}
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.btns-1:hover{
+  transform: scale(1.025);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btns-2:hover{
+  transform: scale(1.025);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-style{
+  border: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 1.5rem !important;
+}
+.card-style,.card-text{
+  padding: 6px !;
+}
+
+.card-style:hover{
+  transform: scale(1.00012) !important;
+  /* Moves the card outward */
+  box-shadow: 0 10px 20px rgba(88, 60, 60, 0.15) !important;
+  /* Adds shadow for a lifting effect */
+}
+
+.card-style:hover .card-text{
+   color: #222222;
+   transform: translateY(-6px);
+  /* Slight upward movement */
+  font-size: 1.1rem;
+  /* Increase font size slightly */
+  letter-spacing: 1px;
+  /* Add some spacing between letters */
+  font-weight: 700;
+}
+
+
+.submit-button {
+  margin-bottom: 5px;
+  width: 70px;
+  height: 25px;
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: darkslateblue;
+  transform: translateY(-3px);
+}
+
+.submit-button:active {
+  background-color: darkslateblue;
+  transform: translateY(0);
+} 
+
+
+/* map styleing */
+#map { 
+   height: 400px;
+   width: 100%;
+
+ }
+
+
+
+
+

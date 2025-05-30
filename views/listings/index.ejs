@@ -1,0 +1,144 @@
+<% layout("/layouts/boilerplate") %> 
+
+<style>
+  #filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter{
+    text-align: center;
+    margin-right: 2.25rem;
+    margin-top: 2rem;
+    opacity: 0.8;
+  }
+
+  .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .filter p{
+      font-size: 12px ;
+  }
+
+  .dark-mode{
+    border: 2px solid black;
+    border-radius: 16px;
+    height: 2.5rem;
+    padding: 0.45rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+</style>
+
+<body >
+    <!-- <h4 style="padding: 6px; margin-bottom: 4px; color: darkslateblue ; ">All listing</h4> -->
+    <!-- <form action="/listings/new" method="get">
+        <button>Create New Listing</button>
+    </form> -->
+   
+     <div id="filters">
+
+
+      <div class="filter">
+        <div><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <p><b>Trending</b></p>
+      </div>
+
+
+      <div class="filter">
+        <div><i class="fa-solid fa-person-booth"></i></div>
+          <p><b>Room</b></p>
+      </div>
+      
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+          <p><b>Iconic</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain-sun"></i></div>
+          <p><b>Mountains</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-cable-car fa-xl"></i></div>
+          <p><b>Cable-car</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+          <p><b>Castles</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+          <p><b>Pool</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-utensils"></i></div>
+          <p><b>Food</b></p>
+      </div>
+      
+      <div class="filter">
+        <div><i class="fa-solid fa-camera-retro"></i></div>
+          <p><b>Photo spot</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-shop"></i></div>
+          <p><b>Shops</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-campground"></i></div>
+          <p><b>Camping</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-tractor"></i></div>
+          <p><b>Frams</b></p>
+      </div>
+
+      <div class="filter">
+        <div><i class="fa-solid fa-person-snowboarding"></i></div>
+          <p><b>Arctic</b></p>
+      </div>
+
+      <div class="dark-mode">
+        <div class="form-check-reverse form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked onclick="dar()">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><strong><b>Dark Mode</b></strong></label>
+        </div>
+      </div>
+
+
+     </div>
+
+
+    <div class="row row-cols-lg-4  row-cols-md-3 row-cols-sm-2 row-cols-xs-1 mt-3">
+      <% for(let listing of allListings) { %>
+        <a class="listing-link" href="/listings/<%=listing._id%>">
+    <div class="card col" >
+        <img style="height: 20rem;" src=<%=listing.image.url%> class="card-img-top" alt="image" >
+
+        <div class="card-img-overlay"></div>
+          
+        <br>
+        <div class="card-body">
+          <p class="card-text"><b><%= listing.title %></b> <br>
+            &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+          </p>
+        </div>
+      </div>
+    </a>
+      <% } %>
+    </div>
+
+</body>
+
+
