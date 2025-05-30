@@ -1,5 +1,5 @@
 ﻿# Hotel-booking-MEHN-
 
-![Clock Screenshot](hotel_booking.png)
+![Project Screenshot](hotel_booking.png)
 
 
